@@ -32,9 +32,12 @@ class _DashboardState extends State<Dashboard> with ColorMixin {
 
   Widget headerWidget() {
     return Container(
+      width: context.width,
         height: headerHeight,
         color: dart1,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             headerWidgetTopRow(),
             headerWidgetTopMain(),
@@ -53,6 +56,8 @@ class _DashboardState extends State<Dashboard> with ColorMixin {
   Widget headerWidgetTopMain() {
     return Container(
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [headerWidgetInformation(), headerWidgetImage()],
       ),
     );
@@ -86,6 +91,6 @@ class _DashboardState extends State<Dashboard> with ColorMixin {
   }
 
   Widget headerWidgetImage() {
-    return Container();
+    return Container(child: Image.asset("assets/images/img_hasan.png",height: 250,),);
   }
 }
