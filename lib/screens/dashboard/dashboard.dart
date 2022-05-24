@@ -68,14 +68,12 @@ class _DashboardState extends State<Dashboard> with ColorMixin {
       crossAxisAlignment: CrossAxisAlignment.start,
       children:  [
 
-      const Text("Asalam u Alikum",style: TextStyle(fontSize: 15,color: Colors.white),),
-      const SizedBox(width: 10,),
-      const Text("I'm Hasan Mehmood",style: TextStyle(fontSize: 40,color: Colors.white),),
-        const SizedBox(width: 10,),
-      const Text("Flutter Android / Ios / Web/ Desktop",style: TextStyle(fontSize: 20,color: Colors.white),),
-        const SizedBox(width: 10,),
-      const Text("about me",style: TextStyle(fontSize: 15,color: Colors.white),),
-        const SizedBox(width: 10,),
+      const Text("Assalamu Alaikum",style: TextStyle(fontSize: 12,color: Colors.white),),
+     Text("I'm Hasan Mehmood",style: TextStyle(fontSize: 45,color: Colors.white),),
+      Text("Flutter Android / Ios / Web/ Desktop",style: TextStyle(fontSize: 18,color: Colors.white),),
+         SizedBox(height: 10,),
+      const Text("I am always energetic and eager to learn new skills\nI have experience working as part of a team and individually",style: TextStyle(fontSize: 12,color: Colors.white),),
+        SizedBox(height: 20,),
        MaterialButton(
         elevation: 10,
           shape: RoundedRectangleBorder(
@@ -91,6 +89,6 @@ class _DashboardState extends State<Dashboard> with ColorMixin {
   }
 
   Widget headerWidgetImage() {
-    return Container(child: Image.asset("assets/images/img_hasan.png",height: 250,),);
+    return Container(child: Image.asset("assets/images/img_hasan.png",fit: BoxFit.fill,height: 400,),);
   }
 }
