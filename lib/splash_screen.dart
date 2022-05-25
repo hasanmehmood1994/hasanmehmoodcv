@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hasanmehmoodcv/src/custom_colors.dart';
 
 import 'package:hasanmehmoodcv/string_apis.dart';
 
+import 'src/custom_colors.dart';
 
 
-class SplashScreen extends StatelessWidget with ColorMixin{
+
+class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
