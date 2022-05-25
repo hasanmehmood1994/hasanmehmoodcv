@@ -8,6 +8,7 @@ import 'package:hasanmehmoodcv/src/string.dart';
 import '../../components/tab_text.dart';
 import '../../mixins/dashboardmixin.dart';
 import 'about_me_widget.dart';
+import 'footerwidget.dart';
 import 'projectwidget.dart';
 import 'skillwidget.dart';
 
@@ -69,6 +70,7 @@ class _DashboardState extends State<Dashboard> with DashboardMixin {
             AboutMe(context),
             SkillWidget(context),
             Projectwidget(context),
+            Expanded(child: Footerwidget(context))
           ],
         ));
   }
