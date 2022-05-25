@@ -12,7 +12,7 @@ class Footerwidget extends StatelessWidget {
     return Container(
       color: dart1,
 
-      child: Center(child: Text("This Website is made by Hasan Mehmood in Flutter"),),
+      child: Center(child: Text("This Website is made by Hasan Mehmood in Flutter",style: TextStyle(color: Colors.white,fontSize: 16),),),
     );
   }
 }
