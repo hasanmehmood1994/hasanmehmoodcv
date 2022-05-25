@@ -34,7 +34,7 @@ mixin DashboardMixin{
   "Matriculation (Science)\n"+
   "Noor Foundation model public school Rawalpindi.\n"
   ;
-  var bodyHeight = 1150.0;
+  var bodyHeight = 1200.0;
   var headerHeight = 380.0;
   var img_url = "https://res.cloudinary.com/practicaldev/image/fetch/s--slljVTGZ--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://cdn-images-1.medium.com/max/800/1%2AROuBKDAhiWFl3jIbDvtinw.png";
   var tabBarHeight = 55.0;
