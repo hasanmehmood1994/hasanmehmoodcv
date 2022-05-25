@@ -40,7 +40,7 @@ mixin DashboardMixin{
   var tabBarHeight = 55.0;
   var aboutMeHeight = 600.0;
 
-var skill_name_list=["Flutter","Firebase","Rest Api calling","ANDROID","JAVA","Google Maps","Local Database","Ios App","Mac App","Desktop App"];
+var skill_name_list=["Flutter","Firebase","Rest Integration","ANDROID","JAVA","Google Maps","Local Database","Ios App","Mac App","Desktop App"];
   var skill_icon_list=["assets/images/img_flutter.png","assets/icons/ic_firebase.png","assets/icons/ic_api.png","assets/icons/ic_android.png","assets/icons/ic_java.png","assets/icons/ic_googlemaps.png","assets/icons/ic_database.png","assets/icons/ic_apple.png","assets/icons/ic_mac.png","assets/icons/ic_desktop.png"];
 
 

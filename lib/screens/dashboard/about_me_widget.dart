@@ -57,6 +57,9 @@ class AboutMe extends StatelessWidget with DashboardMixin {
                 style: TextStyle(
                     color: Colors.white, fontSize: 18, letterSpacing: 2,overflow: TextOverflow.ellipsis),maxLines: 1,
               ),
+              SizedBox(
+                height:20,
+              ),
               Text(
                 "$about_me_text3",
                 style: TextStyle(
@@ -152,7 +155,7 @@ class AboutMe extends StatelessWidget with DashboardMixin {
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: 14,
-                              letterSpacing: 1,overflow: TextOverflow.ellipsis),maxLines: 1,
+                              letterSpacing: 1,overflow: TextOverflow.ellipsis),maxLines: 9,
                       ),
                       SizedBox(
                         height: 20,
