@@ -94,6 +94,8 @@ class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMi
 
   Widget headerWidgetTopMain() {
     return Container(
+      margin:
+      currentScreen==CurrentScreen.Desktop?EdgeInsets.fromLTRB(0, 0, 0, 0):EdgeInsets.fromLTRB(10, 0,10, 0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -113,10 +115,15 @@ class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMi
             asalam_u_alikum_text,
             style: const TextStyle(fontSize: 14, color: Colors.white,overflow: TextOverflow.ellipsis),maxLines: 1,
           ),
+          currentScreen==CurrentScreen.Desktop?
           Text(
             name_text,
             style: const TextStyle(
                 fontSize: 45, color: Colors.white, fontWeight: FontWeight.bold,overflow: TextOverflow.ellipsis),maxLines: 1,
+          ): Text(
+            name_text,
+            style:  TextStyle(
+                fontSize: currentScreen==CurrentScreen.Mobile?28:35, color: Colors.white, fontWeight: FontWeight.bold,overflow: TextOverflow.ellipsis),maxLines: 1,
           ),
           const SizedBox(
             height: 20,
@@ -193,8 +200,8 @@ class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMi
 
         "assets/images/img_hasan.png",
         fit: BoxFit.fill,
-        height: headerHeight,
-        width: currentScreen==CurrentScreen.Desktop?380:250.0,
+        height:  headerHeight,
+        width: currentScreen==CurrentScreen.Desktop?370:280.0,
       ),
     );
   }
