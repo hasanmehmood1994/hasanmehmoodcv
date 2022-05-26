@@ -75,7 +75,7 @@ class AboutMe extends StatelessWidget with DashboardMixin {
 
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               //  Text("$personal_info_text",style: TextStyle(color: Colors.white,fontSize: 16,letterSpacing:1 ),),
             ],
@@ -87,7 +87,7 @@ class AboutMe extends StatelessWidget with DashboardMixin {
 
   Widget personalInfo_Education_ItemCard() {
     return Container(
-     height: 300,
+     height: personal_info_education_height,
       margin: EdgeInsets.fromLTRB(40, 10, 40, 10),
       width: context.width,
       child: Card(
