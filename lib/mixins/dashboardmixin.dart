@@ -39,18 +39,19 @@ mixin DashboardMixin {
   "Matriculation (Science)\n"+
   "Noor Foundation model public school Rawalpindi.\n";
   var bodyHeight = 1200.0;
-  var bodyHeight_mobile = 1400.0;
+  var bodyHeight_mobile = 1600.0;
   //1200.0;
   var headerHeight = 400.0;
   var img_url = "https://res.cloudinary.com/practicaldev/image/fetch/s--slljVTGZ--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://cdn-images-1.medium.com/max/800/1%2AROuBKDAhiWFl3jIbDvtinw.png";
   var tabBarHeight = 55.0;
   var aboutMeHeight = 620.0;
-  var aboutMeHeight_mobile = 800.0;
+  var aboutMeHeight_mobile = 820.0;
   var objectHeight = 190.0;
   var objectHeight_mobile = 250.0;
 
 
   var personal_info_education_height=320.0;
+  var personal_info_education_height_mobile=640.0;
 
 var skill_name_list=["Flutter","Firebase","Rest Integration","ANDROID","JAVA","Google Maps","Local Database","Ios App","Mac App","Desktop App"];
   var skill_icon_list=["assets/images/img_flutter.png","assets/icons/ic_firebase.png","assets/icons/ic_api.png","assets/icons/ic_android.png","assets/icons/ic_java.png","assets/icons/ic_googlemaps.png","assets/icons/ic_database.png","assets/icons/ic_apple.png","assets/icons/ic_mac.png","assets/icons/ic_desktop.png"];
