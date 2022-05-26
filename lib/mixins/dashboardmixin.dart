@@ -38,7 +38,7 @@ mixin DashboardMixin{
   ;
   var bodyHeight = 1200.0;
   //1200.0;
-  var headerHeight = 0.0;
+  var headerHeight = 400.0;
   var img_url = "https://res.cloudinary.com/practicaldev/image/fetch/s--slljVTGZ--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://cdn-images-1.medium.com/max/800/1%2AROuBKDAhiWFl3jIbDvtinw.png";
   var tabBarHeight = 55.0;
   var aboutMeHeight = 620.0;
@@ -47,16 +47,21 @@ mixin DashboardMixin{
 var skill_name_list=["Flutter","Firebase","Rest Integration","ANDROID","JAVA","Google Maps","Local Database","Ios App","Mac App","Desktop App"];
   var skill_icon_list=["assets/images/img_flutter.png","assets/icons/ic_firebase.png","assets/icons/ic_api.png","assets/icons/ic_android.png","assets/icons/ic_java.png","assets/icons/ic_googlemaps.png","assets/icons/ic_database.png","assets/icons/ic_apple.png","assets/icons/ic_mac.png","assets/icons/ic_desktop.png"];
   var slider_items=[
-    Image.asset("assets/projects/test1.jpg",fit: BoxFit.fill,),
-    sliderItemWidget(txt: "Supply Chain Mobile Pos",backgroud: Colors.yellow.shade200,txtclr: Colors.yellow),
-    sliderItemWidget(txt: "Gems Wares Inventory Management",backgroud:Colors.orange.shade200,txtclr: Colors.orange),
-    sliderItemWidget(txt: "Styler Salons Booking App (saudi saloons)",backgroud:Colors.cyan.shade200,txtclr: Colors.cyan),
-    sliderItemWidget(txt: "E-learning App ",backgroud:Colors.blueAccent.shade100,txtclr: Colors.blueAccent),
-    sliderItemWidget(txt: "Dr Gersch Appointment Booking App  ",backgroud:Colors.greenAccent.shade100,txtclr: Colors.greenAccent),
-    sliderItemWidget(txt: "Smart Notice Board Tv/Mob App  ",backgroud:Colors.blue.shade200,txtclr: Colors.blue),
-    sliderItemWidget(txt: "Scan a deal  ",backgroud:Colors.amber.shade200,txtclr: Colors.amber),
-    sliderItemWidget(txt: "360 camera app  ",backgroud:Colors.purple.shade200,txtclr: Colors.purple),
-    sliderItemWidget(txt: "Scrum Poker ",backgroud:Colors.blueAccent.shade100,txtclr: Colors.blueAccent),
+
+    sliderItemWidget(txt: "Supply Chain Mobile Pos",backgroud: clr_supplychain,txtclr: clr_supplychain,imgurl: "assets/projects/project_supplychain.jpg"),
+    sliderItemWidget(txt: "Gems Wares Inventory Management",backgroud:clr_gemswears,txtclr: clr_gemswears,imgurl: "assets/projects/project_gemwares.png"),
+    sliderItemWidget(txt: "Styler Salons Booking App (saudi saloons)",backgroud:clr_styler,txtclr: clr_styler,imgurl: "assets/projects/project_styler.png"),
+    sliderItemWidget(txt: "Clear-Dil-Kyc ",backgroud:Colors.blueAccent.shade100,txtclr: Colors.blueAccent,imgurl: "assets/projects/project_kyc.png"),
+    sliderItemWidget(txt: "E-learning App ",backgroud:clr_elearning,txtclr:clr_elearning,imgurl: "assets/projects/project_elearning.png"),
+    sliderItemWidget(txt: "Dr Gersch Appointment Booking App  ",backgroud:clr_drgerch,txtclr:clr_drgerch,imgurl: "assets/projects/project_drgesch.png"),
+    sliderItemWidget(txt: "Smart Notice Board Tv/Mob App  ",backgroud:clr_smartnotice,txtclr: clr_smartnotice,imgurl: "assets/projects/project_smartnoticeboard.png"),
+    sliderItemWidget(txt: "Scan a deal  ",backgroud:clr_scanadeal,txtclr:clr_scanadeal,imgurl: "assets/projects/project_scanadeal.png"),
+    sliderItemWidget(txt: "360 camera app  ",backgroud:clr_camera360,txtclr: clr_camera360,imgurl: "assets/projects/project_camera360.png"),
+    sliderItemWidget(txt: "Scrum Poker ",backgroud:clr_scrum,txtclr:clr_scrum,imgurl: "assets/projects/project_scrumpoker.png"),
+    sliderItemWidget(txt: "Willson Fitness Classes",backgroud: clr_willson,txtclr:clr_willson,imgurl: 'assets/projects/project_willson.png'),
+    sliderItemWidget(txt: "Casuality",backgroud: clr_causality,txtclr: clr_causality,imgurl: 'assets/projects/project_casuality.jpg'),
+
+
   ];
 
 
@@ -81,14 +86,18 @@ var skill_name_list=["Flutter","Firebase","Rest Integration","ANDROID","JAVA","G
   }
 
 }
-
- Widget sliderItemWidget({txt,backgroud,txtclr}) {
+var default_project_image="assets/projects/project_supplychain.jpg";
+ Widget sliderItemWidget({txt,backgroud,txtclr,imgurl}) {
   return Container(
     decoration: new BoxDecoration(
-        color: backgroud??Colors.white,
+        color: backgroud.withOpacity(0.4)??Colors.white,
         borderRadius: new BorderRadius.all( Radius.circular(10.0))
     ),
     padding: EdgeInsets.all(10),
     width: double.infinity,
- child: Text("${txt}",style: TextStyle(color:txtclr?? orange,fontSize: 18),),);
+ child: Column(children: [Text("${txt}",style: TextStyle(color:txtclr?? orange,fontSize: 22,fontWeight: FontWeight.bold),),
+ Spacer(),
+ Image.asset(imgurl??default_project_image,width: 100,height: 100,),
+   Spacer(),
+ ]),);
 }

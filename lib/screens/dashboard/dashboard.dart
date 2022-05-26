@@ -67,6 +67,7 @@ class _DashboardState extends State<Dashboard> with DashboardMixin {
 
 
           children: [
+
             AboutMe(context),
             SkillWidget(context),
             Expanded(child: Projectwidget(context)),
