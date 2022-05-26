@@ -53,13 +53,14 @@ var skill_name_list=["Flutter","Firebase","Rest Integration","ANDROID","JAVA","G
     sliderItemWidget(txt: "Styler Salons Booking App (saudi saloons)",backgroud:clr_styler,txtclr: clr_styler,imgurl: "assets/projects/project_styler.png"),
     sliderItemWidget(txt: "Clear-Dil-Kyc ",backgroud:Colors.blueAccent.shade100,txtclr: Colors.blueAccent,imgurl: "assets/projects/project_kyc.png"),
     sliderItemWidget(txt: "E-learning App ",backgroud:clr_elearning,txtclr:clr_elearning,imgurl: "assets/projects/project_elearning.png"),
+    sliderItemWidget(txt: "Casuality",backgroud: clr_causality,txtclr: clr_causality,imgurl: 'assets/projects/project_casuality.jpg'),
     sliderItemWidget(txt: "Dr Gersch Appointment Booking App  ",backgroud:clr_drgerch,txtclr:clr_drgerch,imgurl: "assets/projects/project_drgesch.png"),
     sliderItemWidget(txt: "Smart Notice Board Tv/Mob App  ",backgroud:clr_smartnotice,txtclr: clr_smartnotice,imgurl: "assets/projects/project_smartnoticeboard.png"),
     sliderItemWidget(txt: "Scan a deal  ",backgroud:clr_scanadeal,txtclr:clr_scanadeal,imgurl: "assets/projects/project_scanadeal.png"),
     sliderItemWidget(txt: "360 camera app  ",backgroud:clr_camera360,txtclr: clr_camera360,imgurl: "assets/projects/project_camera360.png"),
     sliderItemWidget(txt: "Scrum Poker ",backgroud:clr_scrum,txtclr:clr_scrum,imgurl: "assets/projects/project_scrumpoker.png"),
     sliderItemWidget(txt: "Willson Fitness Classes",backgroud: clr_willson,txtclr:clr_willson,imgurl: 'assets/projects/project_willson.png'),
-    sliderItemWidget(txt: "Casuality",backgroud: clr_causality,txtclr: clr_causality,imgurl: 'assets/projects/project_casuality.jpg'),
+    sliderItemWidget(txt: "ML & CMIS",backgroud: clr_mlics,txtclr:clr_mlics,imgurl: 'assets/projects/project_mlics.png'),
 
 
   ];
