@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class SkillWidget extends StatelessWidget with DashboardMixin {
       child: Row(children: [
         Image.asset("${skill_icon_list[index]}",height: 30,width: 30,),
         SizedBox(width: 4,),
-        Text("${skill_name_list[index]}",style: TextStyle(fontSize: 16,color: Colors.white,overflow: TextOverflow.ellipsis),maxLines: 1),
+        AutoSizeText("${skill_name_list[index]}",style: TextStyle(fontSize: 16,color: Colors.white,overflow: TextOverflow.ellipsis),maxLines: 1),
 
       ],),
 

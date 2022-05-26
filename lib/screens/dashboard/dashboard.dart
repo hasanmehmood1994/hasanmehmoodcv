@@ -1,12 +1,15 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/src/extensions/context_extensions.dart';
+import 'package:hasanmehmoodcv/enums/screen.dart';
 import 'package:hasanmehmoodcv/extensions/customextention.dart';
 import 'package:hasanmehmoodcv/src/custom_colors.dart';
 import 'package:hasanmehmoodcv/src/string.dart';
 
 import '../../components/tab_text.dart';
 import '../../mixins/dashboardmixin.dart';
+import '../../responsive.dart';
 import 'about_me_widget.dart';
 import 'footerwidget.dart';
 import 'projectwidget.dart';
@@ -19,16 +22,25 @@ class Dashboard extends StatefulWidget {
   _DashboardState createState() => _DashboardState();
 }
 
-class _DashboardState extends State<Dashboard> with DashboardMixin {
+class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMixin{
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    //getCurrentScreen(context);
+  }
   @override
   Widget build(BuildContext context) {
+    getCurrentScreen(context);
     return SafeArea(child: Scaffold(body: mainWidget()));
   }
 
   Widget mainWidget() {
+
     return Column(
       children: [
-        tabBarWidget(),
+        Text("${currentScreen}"),
+       tabBarWidget(),
         Expanded(
           child: ListView(
             children: [
@@ -61,7 +73,7 @@ class _DashboardState extends State<Dashboard> with DashboardMixin {
 
   Widget bodyWidget() {
     return Container(
-        height: bodyHeight,
+        height: currentScreen==CurrentScreen.Mobile?bodyHeight_mobile:bodyHeight,
         color: dart2,
         child: Column(
 
@@ -85,7 +97,9 @@ class _DashboardState extends State<Dashboard> with DashboardMixin {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [headerWidgetInformation(), headerWidgetImage()],
+        children: [headerWidgetInformation(),
+          currentScreen==CurrentScreen.Mobile?Text(""):headerWidgetImage()
+        ],
       ),
     );
   }
@@ -153,11 +167,6 @@ class _DashboardState extends State<Dashboard> with DashboardMixin {
               ),
             ],
           ),
-
-          //    const
-          //    Text("
-          //    I am always energetic and eager to learn new skills\nI have experience working as part of a team and individually",style: TextStyle(fontSize: 12,color: Colors.white),),
-
           SizedBox(
             height: 20,
           ),
@@ -167,12 +176,12 @@ class _DashboardState extends State<Dashboard> with DashboardMixin {
                     borderRadius: BorderRadius.circular(5.0),
                   ),
                   color: orange,
-                  child: const Text(
+                  child: const AutoSizeText(
                     "View Cv",
                     style: TextStyle(fontSize: 15, color: Colors.white,overflow: TextOverflow.ellipsis),maxLines: 1,
                   ),
                   onPressed: () {})
-              .sizedBoxCustom(height: 40, width: 80),
+              .sizedBoxCustom(height: 40, width: 100),
         ],
       ),
     );
@@ -181,9 +190,11 @@ class _DashboardState extends State<Dashboard> with DashboardMixin {
   Widget headerWidgetImage() {
     return Container(
       child: Image.asset(
+
         "assets/images/img_hasan.png",
         fit: BoxFit.fill,
         height: headerHeight,
+        width: currentScreen==CurrentScreen.Desktop?380:250.0,
       ),
     );
   }
@@ -205,6 +216,7 @@ class _DashboardState extends State<Dashboard> with DashboardMixin {
               fit: BoxFit.fill,
             )
           ]),
+          currentScreen==CurrentScreen.Mobile?Icon(Icons.menu,color: orange,size: 40,):
           Row(children: [
             TabText(txt: "About Me"),
             TabText(txt: "Skills"),

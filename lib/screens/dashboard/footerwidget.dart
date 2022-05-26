@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../src/custom_colors.dart';
@@ -16,7 +17,7 @@ class Footerwidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-        Text("This Website is made by Hasan Mehmood in Flutter  ",style: TextStyle(color: Colors.white,fontSize: 16),),
+            AutoSizeText("This Website is made by Hasan Mehmood in Flutter  ",style: TextStyle(color: Colors.white,fontSize: 16),),
         Image.asset("assets/images/img_flutter.png",width: 25,height: 25,),
       ]),
     );

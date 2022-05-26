@@ -1,8 +1,11 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hasanmehmoodcv/src/custom_colors.dart';
 
-mixin DashboardMixin{
+import '../responsive.dart';
+
+mixin DashboardMixin {
   var asalam_u_alikum_text="Asalamu Alaikum";
   String name_text="I'm Hasan Mehmood";
   String platform_name="Android |  Ios | WeB | Desktop | Mac ";
@@ -34,14 +37,19 @@ mixin DashboardMixin{
   "Global college system Rawalpindi.\n\n"+
 
   "Matriculation (Science)\n"+
-  "Noor Foundation model public school Rawalpindi.\n"
-  ;
+  "Noor Foundation model public school Rawalpindi.\n";
   var bodyHeight = 1200.0;
+  var bodyHeight_mobile = 1400.0;
   //1200.0;
   var headerHeight = 400.0;
   var img_url = "https://res.cloudinary.com/practicaldev/image/fetch/s--slljVTGZ--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://cdn-images-1.medium.com/max/800/1%2AROuBKDAhiWFl3jIbDvtinw.png";
   var tabBarHeight = 55.0;
   var aboutMeHeight = 620.0;
+  var aboutMeHeight_mobile = 800.0;
+  var objectHeight = 190.0;
+  var objectHeight_mobile = 250.0;
+
+
   var personal_info_education_height=320.0;
 
 var skill_name_list=["Flutter","Firebase","Rest Integration","ANDROID","JAVA","Google Maps","Local Database","Ios App","Mac App","Desktop App"];
@@ -58,16 +66,16 @@ var skill_name_list=["Flutter","Firebase","Rest Integration","ANDROID","JAVA","G
     sliderItemWidget(txt: "Smart Notice Board Tv/Mob App  ",backgroud:clr_smartnotice,txtclr: clr_smartnotice,imgurl: "assets/projects/project_smartnoticeboard.png"),
     sliderItemWidget(txt: "Scan a deal  ",backgroud:clr_scanadeal,txtclr:clr_scanadeal,imgurl: "assets/projects/project_scanadeal.png"),
     sliderItemWidget(txt: "360 camera app  ",backgroud:clr_camera360,txtclr: clr_camera360,imgurl: "assets/projects/project_camera360.png"),
+    sliderItemWidget(txt: "ML & CMIS",backgroud: clr_mlics,txtclr:clr_mlics,imgurl: 'assets/projects/project_mlics.png'),
     sliderItemWidget(txt: "Scrum Poker ",backgroud:clr_scrum,txtclr:clr_scrum,imgurl: "assets/projects/project_scrumpoker.png"),
     sliderItemWidget(txt: "Willson Fitness Classes",backgroud: clr_willson,txtclr:clr_willson,imgurl: 'assets/projects/project_willson.png'),
-    sliderItemWidget(txt: "ML & CMIS",backgroud: clr_mlics,txtclr:clr_mlics,imgurl: 'assets/projects/project_mlics.png'),
 
 
   ];
 
 
 
-   GlobalKey key_about_me=GlobalKey();
+  GlobalKey key_about_me=GlobalKey();
   GlobalKey key_skills=GlobalKey();
   GlobalKey key_portfolio=GlobalKey();
   GlobalKey key_tutorials=GlobalKey();
@@ -96,9 +104,12 @@ var default_project_image="assets/projects/project_supplychain.jpg";
     ),
     padding: EdgeInsets.all(10),
     width: double.infinity,
- child: Column(children: [Text("${txt}",style: TextStyle(color:txtclr?? orange,fontSize: 22,fontWeight: FontWeight.bold),),
+ child: Column(children: [AutoSizeText("${txt}",style: TextStyle(color:txtclr?? orange,fontSize: 22,fontWeight: FontWeight.bold),),
  Spacer(),
  Image.asset(imgurl??default_project_image,width: 100,height: 100,),
    Spacer(),
  ]),);
+
+  //projects_description
+
 }

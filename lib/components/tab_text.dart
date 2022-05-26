@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hasanmehmoodcv/enums/screen.dart';
 
+import '../responsive.dart';
 import '../src/custom_colors.dart';
 
-class TabText extends StatelessWidget {
+class TabText extends StatelessWidget  with ResponsiveMixin {
   var txt, clr, hoverclr;
 
   TabText({this.txt, this.clr, this.hoverclr});
@@ -10,9 +12,9 @@ class TabText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-
+getCurrentScreen(context);
     return Container(
-        margin: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+        margin: currentScreen==CurrentScreen.Tablet?EdgeInsets.fromLTRB(5, 10, 5, 10):EdgeInsets.fromLTRB(10, 10, 10, 10) ,
         child: MaterialButton(
             onPressed: () {},
             hoverColor: this.hoverclr ?? orange,
@@ -20,7 +22,7 @@ class TabText extends StatelessWidget {
               "$txt ",
               style: TextStyle(
                   color: clr ?? Colors.white,
-                  fontSize: 18,
+                  fontSize: currentScreen==CurrentScreen.Tablet?15:18,
                   fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,
             )));
