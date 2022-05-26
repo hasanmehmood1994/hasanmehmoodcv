@@ -47,7 +47,7 @@ mixin DashboardMixin {
   var aboutMeHeight = 620.0;
   var aboutMeHeight_mobile = 820.0;
   var objectHeight = 190.0;
-  var objectHeight_mobile = 250.0;
+  var objectHeight_mobile = 280.0;
 
 
   var personal_info_education_height=320.0;
