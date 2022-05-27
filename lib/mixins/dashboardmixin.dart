@@ -2,10 +2,13 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hasanmehmoodcv/src/custom_colors.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../responsive.dart';
 
 mixin DashboardMixin {
+
+  var cv_pdf_url="https://firebasestorage.googleapis.com/v0/b/hasanmehmoodportfolio.appspot.com/o/HasanCv2022.pdf?alt=media&token=ffc1ef26-6016-4135-a397-5f80b5e5fd58";
   var asalam_u_alikum_text="Asalamu Alaikum";
   String name_text="I'm Hasan Mehmood";
   String platform_name="Android |  Ios | WeB | Desktop | Mac ";
@@ -34,18 +37,18 @@ mixin DashboardMixin {
   "Foundation university Rawalpindi campus.\n\n"+
 
   "F.Sc (ICS)\n"+
-  "Global college system Rawalpindi.\n\n"+
+  "Global college system Rawalpindi.";
 
-  "Matriculation (Science)\n"+
-  "Noor Foundation model public school Rawalpindi.\n";
+  // "Matriculation (Science)\n"+
+  // "Noor Foundation model public school Rawalpindi.\n";
   var bodyHeight = 1200.0;
-  var bodyHeight_mobile = 1600.0;
+  var bodyHeight_mobile = 1480.0;
   //1200.0;
   var headerHeight = 400.0;
   var img_url = "https://res.cloudinary.com/practicaldev/image/fetch/s--slljVTGZ--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://cdn-images-1.medium.com/max/800/1%2AROuBKDAhiWFl3jIbDvtinw.png";
   var tabBarHeight = 55.0;
   var aboutMeHeight = 620.0;
-  var aboutMeHeight_mobile = 820.0;
+  var aboutMeHeight_mobile = 880.0;
   var objectHeight = 190.0;
   var objectHeight_mobile = 280.0;
 
@@ -80,7 +83,9 @@ var skill_name_list=["Flutter","Firebase","Rest Integration","ANDROID","JAVA","G
   GlobalKey key_skills=GlobalKey();
   GlobalKey key_portfolio=GlobalKey();
   GlobalKey key_tutorials=GlobalKey();
-
+  launchCvFromUrl() async {
+    if (!await launchUrl(Uri.parse(cv_pdf_url))) throw 'Could not launch $cv_pdf_url';
+  }
   String calculate_work_experience(){
     final start_date = DateTime(2020, 1, 1);
     final date2 = DateTime.now();

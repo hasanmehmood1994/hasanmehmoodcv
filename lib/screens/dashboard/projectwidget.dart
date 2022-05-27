@@ -15,6 +15,7 @@ class Projectwidget extends StatelessWidget with DashboardMixin,ResponsiveMixin{
   Widget build(BuildContext context) {
     getCurrentScreen(context);
     return Container(
+
       margin: EdgeInsets.fromLTRB(0, 30, 0, 30),
       width: context.width,
 

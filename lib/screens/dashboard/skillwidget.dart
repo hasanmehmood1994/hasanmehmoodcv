@@ -14,7 +14,7 @@ class SkillWidget extends StatelessWidget with DashboardMixin {
     // TODO: implement build
     return Container(
       height: 100,
-        margin: EdgeInsets.fromLTRB(40, 10, 40, 10),
+        margin: EdgeInsets.fromLTRB(20, 10, 20, 10),
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
           itemCount: skill_name_list.length,

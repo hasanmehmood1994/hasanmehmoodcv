@@ -44,7 +44,6 @@ class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMi
         Expanded(
           child: ListView(
             children: [
-
               headerWidget(),
               bodyWidget(),
             ],
@@ -73,7 +72,7 @@ class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMi
 
   Widget bodyWidget() {
     return Container(
-        height: currentScreen==CurrentScreen.Mobile?bodyHeight_mobile:bodyHeight,
+        height: currentScreen==CurrentScreen.Desktop?bodyHeight:bodyHeight_mobile,
         color: dart2,
         child: Column(
 
@@ -81,8 +80,21 @@ class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMi
           children: [
 
             AboutMe(context),
+            Text("SKILLS",
+              style: TextStyle(
+                  color: orange,
+                  fontSize: 26,
+                  letterSpacing: 1,
+                  fontWeight: FontWeight.bold ,overflow: TextOverflow.ellipsis),maxLines: 1,),
             SkillWidget(context),
+            Text("PROJECTS",
+              style: TextStyle(
+                  color: orange,
+                  fontSize: 26,
+                  letterSpacing: 1,
+                  fontWeight: FontWeight.bold ,overflow: TextOverflow.ellipsis),maxLines: 1,),
             Expanded(child: Projectwidget(context)),
+
             Footerwidget(context)
           ],
         ));
@@ -187,7 +199,7 @@ class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMi
                     "View Cv",
                     style: TextStyle(fontSize: 15, color: Colors.white,overflow: TextOverflow.ellipsis),maxLines: 1,
                   ),
-                  onPressed: () {})
+                  onPressed: () {launchCvFromUrl();})
               .sizedBoxCustom(height: 40, width: 100),
         ],
       ),
@@ -208,6 +220,7 @@ class _DashboardState extends State<Dashboard> with DashboardMixin ,ResponsiveMi
 
   Widget tabBarWidget() {
     return Container(
+      padding: EdgeInsets.fromLTRB(4, 0, 10, 0),
       width: context.width,
       height: tabBarHeight,
       color: dart1,
